@@ -6,9 +6,11 @@ public class EmployeeWage {
 	Employee emp=new Employee();
 	emp.attendence();
 	emp.dailyWage();
+	emp.partTime();
 	}
 }
 class Employee {
+	
 	void attendence() {
 		
 	int is_Full_Time=1;
@@ -25,6 +27,27 @@ class Employee {
 		int daily_Hours=8;
 		int dailyWage=wage_Per_Hour*daily_Hours;
 		System.out.println("Daily wage of Employee = " +dailyWage);
+	}
+	void partTime()
+	{
+		 int partTime=1;
+        	 int fullTime=2;
+	         double empCheck = Math.floor(Math.random() * 10)%3;
+
+		   switch((int)(empCheck)) {
+
+                                case 1:
+                                       int emphr = 4;
+						System.out.println("parttime");
+                                        break;
+                                case 2:
+                                        emphr = 8;
+						System.out.println("fulltime");
+                                        break;
+                                default:
+                                     	emphr = 0;
+
+                               }
 	}
 }
 
