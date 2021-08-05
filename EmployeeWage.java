@@ -32,7 +32,7 @@ class Employee {
 	{
 		 int partTime=1;
         	 int fullTime=2;
-	         double empCheck = Math.floor(Math.random() * 10)%3;
+	         int empCheck = (int)Math.floor(Math.random() * 10)%3;
 
 		   switch((int)(empCheck)) {
 
@@ -46,6 +46,12 @@ class Employee {
                                         break;
                                 default:
                                      	emphr = 0;
+                         System.out.println("absent");
+                         int totalWorkingHours=0;
+                         totalWorkingHours = totalWorkingHours + emphr;
+                         int WagePerHour=20;
+                     	int Salary_20Days=WagePerHour*totalWorkingHours;
+                     	System.out.println("salary for 20 day = " +Salary_20Days);
 
                                }
 	}
